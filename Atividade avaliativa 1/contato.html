@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contato - Currículo Digital">
+    <title>Contato | Currículo Digital</title>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ============================================
+         CABEÇALHO COM MENU DE NAVEGAÇÃO
+         ============================================ -->
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Logo do site -->
+                <a href="index.html" class="logo">Meu<span>Portfólio</span></a>
+                
+                <!-- Menu de navegação -->
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Mim</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         SEÇÃO HERO / CABEÇALHO DA PÁGINA
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <h1>Fale Comigo</h1>
+            <p>Entre em contato para dúvidas, orçamentos ou parcerias</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO FORMULÁRIO DE CONTATO
+         ============================================ -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Envie uma Mensagem</h2>
+            
+            <!-- Formulário de contato -->
+            <div class="formulario-container">
+                <form action="#" method="POST">
+                    <!-- Campo: Nome -->
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" 
+                               id="nome" 
+                               name="nome" 
+                               placeholder="Digite seu nome completo" 
+                               required>
+                    </div>
+
+                    <!-- Campo: E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="Digite seu e-mail" 
+                               required>
+                    </div>
+
+                    <!-- Campo: Assunto (opcional) -->
+                    <div class="form-group">
+                        <label for="assunto">Assunto (Opcional)</label>
+                        <input type="text" 
+                               id="assunto" 
+                               name="assunto" 
+                               placeholder="Digite o assunto da mensagem">
+                    </div>
+
+                    <!-- Campo: Mensagem -->
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" 
+                                  name="mensagem" 
+                                  placeholder="Digite sua mensagem aqui..." 
+                                  required></textarea>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO INFORMAÇÕES DE CONTATO
+         ============================================ -->
+    <section style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Outras Formas de Contato</h2>
+            
+            <div class="card-grid">
+                <!-- E-mail -->
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+                    <h3>E-mail</h3>
+                    <p>tiagobortolini05@gmail.com</p>
+                    <a href="mailto:tiagobortolini05@gmail.com" class="btn" style="margin-top: 1rem;">Enviar E-mail</a>
+                </div>
+
+                <!-- Telefone -->
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+                    <h3>Telefone</h3>
+                    <p>+55 21 965296999</p>
+                    <a href="tel:+5521965296999" class="btn" style="margin-top: 1rem;">Ligar</a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💼</div>
+                    <h3>GitHub</h3>
+                    <p>github.com/HelionLight</p>
+                    <a href="https://github.com/HelionLight" 
+                       target="_blank" 
+                       class="btn" 
+                       style="margin-top: 1rem;">
+                       Ver Perfil
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💻</div>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/tiago-bortolini</p>
+                    <a href="https://linkedin.com/in/tiago-bortolini" 
+                       target="_blank" 
+                       class="btn" 
+                       style="margin-top: 1rem;">
+                       Ver Repositórios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO LOCALIZAÇÃO (MAPA)
+         ============================================ -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Minha Localização</h2>
+            
+            <div class="imagem-container">
+                <!-- Mapa incorporado (Google Maps) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4675.011874233673!2d-45.89243892337613!3d-23.17954298433458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4bc8553c791b%3A0x7e99d05c4b3c0283!2sS%C3%A3o%20Jos%C3%A9%20dos%20Campos%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <p style="text-align: center; margin-top: 1rem; opacity: 0.8;">
+                <em>Localização: São José dos Campos, SP - Brasil</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RODAPÉ
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tiago Bortolini. Todos os direitos reservados.</p>
+            <p>Desenvolvido com HTML e CSS | <a href="#">Voltar ao topo</a></p>
+        </div>
+    </footer>
+</body>
+</html>
