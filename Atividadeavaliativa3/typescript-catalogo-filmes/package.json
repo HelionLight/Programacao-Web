@@ -1,0 +1,20 @@
+{
+  "name": "catalogo-filmes-ts",
+  "version": "1.0.0",
+  "description": "Catálogo de Filmes em TypeScript - Atividade Avaliativa 3",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/readline-sync": "^1.4.7",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
