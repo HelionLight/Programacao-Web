@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Mundo - Continentes, Países e Cidades</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="loginSection" class="login-panel">
+      <h1>CRUD Mundo</h1>
+      <p>Faça login para gerenciar continentes, países e cidades.</p>
+      <form id="loginForm" class="card">
+        <label>
+          Email
+          <input type="email" id="loginEmail" required placeholder="admin@crudmundo.local" />
+        </label>
+        <label>
+          Senha
+          <input type="password" id="loginPassword" required placeholder="Admin123!" />
+        </label>
+        <button type="submit" class="primary-button">Entrar</button>
+        <p class="hint">Email: admin@crudmundo.local | Senha: Admin123!</p>
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section id="appSection" class="app-container hidden">
+      <header class="app-header">
+        <div>
+          <h1>CRUD Mundo</h1>
+          <p>Gerencie continentes, países, cidades e veja dados externos.</p>
+        </div>
+        <button id="logoutButton" class="secondary-button">Sair</button>
+      </header>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <h2>Continentes</h2>
+          <div class="actions-row">
+            <button id="showContinentForm" class="secondary-button">Novo Continente</button>
+          </div>
+          <div id="continentList" class="list"></div>
+        </article>
+
+        <article class="panel">
+          <h2>Países</h2>
+          <div class="actions-row">
+            <button id="showCountryForm" class="secondary-button">Novo País</button>
+          </div>
+          <div class="filter-row">
+            <label>Continente
+              <select id="countryContinentFilter"><option value="">Todos</option></select>
+            </label>
+          </div>
+          <div id="countryList" class="list"></div>
+          <div id="countryPagination" class="pagination"></div>
+        </article>
+
+        <article class="panel">
+          <h2>Cidades</h2>
+          <div class="actions-row">
+            <button id="showCityForm" class="secondary-button">Nova Cidade</button>
+          </div>
+          <div class="filter-row">
+            <label>Continente
+              <select id="cityContinentFilter"><option value="">Todos</option></select>
+            </label>
+            <label>País
+              <select id="cityCountryFilter"><option value="">Todos</option></select>
+            </label>
+          </div>
+          <div id="cityList" class="list"></div>
+          <div id="cityPagination" class="pagination"></div>
+        </article>
+      </section>
+
+      <section class="panel panel-full">
+        <h2>Dados Externos</h2>
+        <div class="external-row">
+          <div>
+            <h3>Buscar país</h3>
+            <div class="input-group">
+              <input id="countrySearchInput" placeholder="Digite o código ISO do país (ex: BR)" />
+              <button id="countrySearchButton" class="secondary-button">Buscar</button>
+            </div>
+            <div id="countryExternalResult" class="external-result"></div>
+          </div>
+          <div>
+            <h3>Buscar clima</h3>
+            <div class="input-group">
+              <input id="weatherSearchInput" placeholder="Digite o nome da cidade" />
+              <button id="weatherSearchButton" class="secondary-button">Buscar</button>
+            </div>
+            <div id="weatherExternalResult" class="external-result"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="formsSection" class="panel panel-full hidden">
+        <button id="closeForms" class="secondary-button">Fechar formulários</button>
+        <div class="form-grid">
+          <form id="continentForm" class="card hidden">
+            <h3 id="continentFormTitle">Cadastrar Continente</h3>
+            <input type="hidden" id="continentId" />
+            <label>Nome<input id="continentName" required /></label>
+            <label>Descrição<textarea id="continentDescription" rows="3" required></textarea></label>
+            <button type="submit" class="primary-button">Salvar Continente</button>
+            <p id="continentMessage" class="message"></p>
+          </form>
+
+          <form id="countryForm" class="card hidden">
+            <h3 id="countryFormTitle">Cadastrar País</h3>
+            <input type="hidden" id="countryId" />
+            <label>Nome<input id="countryName" required /></label>
+            <label>População<input id="countryPopulation" type="number" min="0" required /></label>
+            <label>Idioma oficial<input id="countryLanguage" required /></label>
+            <label>Moeda<input id="countryCurrency" required /></label>
+            <label>Continente<select id="countryContinentSelect" required></select></label>
+            <button type="submit" class="primary-button">Salvar País</button>
+            <p id="countryMessage" class="message"></p>
+          </form>
+
+          <form id="cityForm" class="card hidden">
+            <h3 id="cityFormTitle">Cadastrar Cidade</h3>
+            <input type="hidden" id="cityId" />
+            <label>Nome<input id="cityName" required /></label>
+            <label>População<input id="cityPopulation" type="number" min="0" required /></label>
+            <label>Latitude<input id="cityLatitude" type="number" step="0.000001" required /></label>
+            <label>Longitude<input id="cityLongitude" type="number" step="0.000001" required /></label>
+            <label>País<select id="cityCountrySelect" required></select></label>
+            <button type="submit" class="primary-button">Salvar Cidade</button>
+            <p id="cityMessage" class="message"></p>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="/dist/app.js"></script>
+</body>
+</html>
